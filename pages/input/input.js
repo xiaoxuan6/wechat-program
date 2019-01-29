@@ -47,7 +47,7 @@ Page({
 
 
   submit1: function (e) {
-    // console.log('点击1');
+    console.log(e);
     var id = e.currentTarget.dataset.id;
     console.log(id);
     wx.showToast({
