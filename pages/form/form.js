@@ -1,3 +1,9 @@
+import urlModel from '../../models/url.model.js';
+var call = require("../../models/request.js");
+
+//获取应用实例
+var app = getApp()
+
 Page({
 
   /**
@@ -26,27 +32,36 @@ Page({
     if (e.detail.value == false) {
       this.setData({
         switch_value: '禁用',
-      });
-      this.setData({
         "datas.radio": 0,
       })
     } else {
       this.setData({
         switch_value: '启用',
-      });
-      this.setData({
         "datas.radio": 1,
       })
     }
   },
-  formSubmit(e){
+  formSubmit: function(e){
+      call.request(urlModel.create, this.data.datas);
     // console.log(this.data.datas);
-    wx.showToast({
-      title: JSON.stringify(this.data.datas),
-      icon: 'none',
-      duration: 1000,
-      mask: true
-    })
+    // wx.showToast({
+    //   title: JSON.stringify(this.data.datas),
+    //   icon: 'none',
+    //   duration: 1000,
+    //   mask: true
+    // })
+   /* wx.request({
+      url: urlModel.create,
+      method: 'post',
+      data: this.data.datas,
+      success(res) {
+        // console.log(res.data)
+          wx.showToast({
+              title: '提交成功',
+              icon: 'success'
+          });
+      }
+    })*/
   },
   username(e){
     this.setData({
@@ -64,7 +79,7 @@ Page({
       "datas.checkbox": e.detail.value
     });
   },
-  formReset(e){
+  formReset: function(e){
     // console.log('reset');
     this.setData({
       'switch': true,
@@ -81,7 +96,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    // wx.request({
+    //   url: urlModel.index,
+    //   success(res) {
+    //     console.log(res.data)
+    //   }
+    // })
+      call.getData(urlModel.index);
   },
 
   /**
@@ -95,7 +116,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    console.log('this is show');
   },
 
   /**

@@ -1,5 +1,6 @@
 //app.js
 App({
+
   onHide: function(){
     console.log('hide');
   },
