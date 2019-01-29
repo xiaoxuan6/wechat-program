@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="">
+    <text>this is form</text>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view>
+        <view>姓名：</view>
+        <input value="" type='text' class="border" bindinput='username' name="username" ></input>
+      </view>
+      <view>
+        <view>性别：</view>
+        <radio-group  bindchange="radio">
+          <label wx:for="{{ radis}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}">{{item.name}}</radio>
+          </label>
+          <!-- <radio value="2" >女</radio> -->
+        </radio-group>
+      </view>
+      <view>
+        <view>地区：</view>
+        <checkbox-group bindchange="checkbox">
+          <!-- <checkbox value="en">美国</checkbox> -->
+          <!-- <checkbox value="zh-CN" checked='checked'>中国</checkbox> -->
+          <label wx:for="{{checkbox}}">
+            <checkbox value="{{item.value}}" checked="{{item.checked}}">{{item.name}}</checkbox>
+          </label>
+        </checkbox-group>
+      </view>
+      <view>
+        <view>开关:</view>
+        <switch checked="{{switch}}" type="switch" bindchange="swith">{{ switch_value }}</switch>
+      </view>
+      <button type="primary" form-type="submit">提交</button>
+      <button class="" form-type="reset">重置</button>
+    </form>
+</view>

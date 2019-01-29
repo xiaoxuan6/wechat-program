@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- <text>this is view</text> -->
+    <button type='primary' class="submit" bindtap='submit'>提交</button>
+    <button type='primary' class="submit1" bindtap='submit1'>提交1</button>
+</view>

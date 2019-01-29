@@ -1,0 +1,48 @@
+<!--logs.wxml-->
+<view class=" log-list">
+
+    <text class="log-item">12这是测试页面\n</text>
+    <text>{{ mydata }}\n</text>
+    <text>{{ mydata1.title }}</text>
+    
+  <!-- 按钮 -->
+  <view style="margin-top:10px;">
+    <button type="primary" bindtap='dianji'>点击</button>
+    <button type="default" bindtap='log'>跳转日志</button>
+  </view>
+  <!-- 单选框 -->
+  <view style="margin-top:20px;">
+  <radio-group bindchange="radio">
+    单选框：
+    <radio value='1' checked=''>是</radio>
+    <radio value='0'>否</radio>
+    <label wx:for="{{items}}">
+      <radio value="{{ item.name}}" checked="{{item.checked}}">{{item.value}}</radio>
+    </label>
+  </radio-group>
+  <!-- 多选框 -->
+  <!-- <view>多\t选\n框：</view> -->
+  <checkbox-group bindchange="checkbox">
+    多选框：
+    <checkbox value='1' checked=''>是</checkbox>
+    <checkbox value='0'>否</checkbox>
+    <label wx:for="{{checkbox}}">
+      <checkbox value="{{ item.name}}" checked="{{item.checked}}">{{item.value}}</checkbox>
+    </label>
+  </checkbox-group> 
+  </view>
+  <!-- 输入框 -->
+  <view style="margin-top:10px;"> 输入框：<input placeholder="这是一个可以自动聚焦的input" auto-focus style='Border:1px solid #000'/></view>
+  <!-- <input maxlength="10" placeholder="最大输入长度10" focus='' /> -->
+  <view>密码：<input password type="number" value='' style='Border:1px solid #000'/> 
+  <!-- <input value='' type='text' placeholder="请输入长度为6" maxlength="6"/> -->
+  </view>
+  <!-- switch -->
+  <view style="white-space:pre-line;">
+  开关：<switch checked="true" type="switch" bindchange="swith">{{ switch_value }}</switch>
+  </view>
+  <!-- textarea -->
+  <view style="white-space:pre-line;">\n文本域：
+  <textarea value='' placeholder="请输入"  focus="true" style='Border:1px solid #000'></textarea>
+  </view>
+</view>

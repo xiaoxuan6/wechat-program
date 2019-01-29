@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/test/test",
+    "pages/logs/logs",
+    "pages/view/view",
+    "pages/tag/tag",
+    "pages/input/input",
+    "pages/form/form"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "green",
+    "backgroundColor":"#fff",
+    "selectedColor": "#000",
+    "borderStyle":"black",
+    "list": [{
+      "pagePath":"pages/index/index",
+      "text":"首页",
+      "iconPath":"imags/card.png",
+      "selectedIconPath":"imags/card-r.png"
+    },{
+      "pagePath": "pages/test/test",
+      "text": "测试",
+      "iconPath": "imags/shop.png",
+      "selectedIconPath": "imags/shop-r.png"
+    },
+    {
+      "pagePath": "pages/tag/tag",
+      "text": "测试视图",
+      "iconPath": "imags/class.png",
+      "selectedIconPath": "imags/class-r.png"
+    },
+    {
+      "pagePath": "pages/input/input",
+      "text": "输入框",
+      "iconPath": "imags/home.png",
+      "selectedIconPath": "imags/home-r.png"
+    },
+    {
+      "pagePath": "pages/form/form",
+      "text": "表单",
+      "iconPath": "imags/users.png",
+      "selectedIconPath": "imags/users-r.png"
+    }]
+   
+  },
+  "debug": true
+}

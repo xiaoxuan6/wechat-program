@@ -1,0 +1,8 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#000",
+  "navigationBarTitleText": "测试",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": false,
+  "backgroundColor": "#eeeeee"
+}
